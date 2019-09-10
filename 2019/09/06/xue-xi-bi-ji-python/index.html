@@ -4,8 +4,8 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="从0开始搭建属于自己的博客（一）, Hexo">
-    <meta name="description" content="一、写在前面想必大家对于“博客”一词并不感到陌生，似乎在印象中博客就是很早以前论坛下一些技术大牛发表文章的网站。随着互联网的发展，手机移动端成为主流，写文章，看文章的用户也转移到了手机上，出现了像微信公众号等平台，似乎掌握新媒体成为了大众必">
+    <meta name="keywords" content="【学习笔记】python, Hexo">
+    <meta name="description" content="BeautifulSoup4库和lxml一样，bs也是一个HTML/XML解析器，作用Html网页进行解析,是解析、遍历、维护“标签树”的功能库，lxml只会局部遍历，而bs是基于HTML DOM，会载入整个文档，解析整个DOM树，因此时间">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +13,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>从0开始搭建属于自己的博客（一） | Hexo</title>
+    <title>【学习笔记】python | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -260,13 +260,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/9.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        从0开始搭建属于自己的博客（一）
+                        【学习笔记】python
                     </div>
                 </div>
             </div>
@@ -377,8 +377,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/教程/" target="_blank">
-                                <span class="chip bg-color">教程</span>
+                            <a href="/tags/笔记/" target="_blank">
+                                <span class="chip bg-color">笔记</span>
                             </a>
                         
                     </div>
@@ -386,36 +386,27 @@
                 </div>
                 <div class="col s5 right-align">
                     
-                    <div class="post-cate">
-                        <i class="fa fa-bookmark fa-fw icon-category"></i>
-                        
-                            <a href="/categories/教程/" class="post-category" target="_blank">
-                                教程
-                            </a>
-                        
-                    </div>
-                    
                 </div>
             </div>
 
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp; 
-                    2019-09-03
+                    2019-09-06
                 </div>
 			
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1k
+                        303
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        3 分
+                        1 分
                     </div>
                     
                 
@@ -431,93 +422,65 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>想必大家对于“博客”一词并不感到陌生，似乎在印象中博客就是很早以前论坛下一些技术大牛发表文章的网站。随着互联网的发展，手机移动端成为主流，写文章，看文章的用户也转移到了手机上，出现了像微信公众号等平台，似乎掌握新媒体成为了大众必备技能之一。</p>
-<p>除此之外，博客也在不断的升级，其技术壁垒的下降，以及其所能承载的功能与适用性的提升，使得越来越多的用户也开始了搭建属于自己的博客。下面总结一下，拥有个人博客的几点好处：</p>
-<ul>
-<li>文章撰写</li>
-<li>笔记/生活记录</li>
-<li>信息资料整合</li>
-<li>个性化管理</li>
-<li>工作面试简历</li>
-<li>作品集展示</li>
-</ul>
-<p>由于我是零基础小白，为了能够建立起自己的博客，找了很多教程，走过很多坑，在此特别感谢b站up主CodeSheep。同时为了避免其他小伙伴踩坑，我会将自己的完整搭建过程写下来，废话不多说，马上搞起！！</p>
-<p>ps：本教程适用于win10系统，使用hexo+github，搭建全程免费，无编程基础的小伙伴也能完成！</p>
-<h2 id="二、前期准备"><a href="#二、前期准备" class="headerlink" title="二、前期准备"></a>二、前期准备</h2><h3 id="1-软件下载"><a href="#1-软件下载" class="headerlink" title="1. 软件下载"></a>1. 软件下载</h3><p>首先需要在电脑下载两个软件（一定要先安装完软件再进行下面的操作！！）：</p>
-<p>【node.js】</p>
-<p>——————————————</p>
-<p>【git】</p>
-<p>在官网选择如下图所示版本进行下载，两个软件安装时均【默认配置不用改】，直接点击next就可以了。</p>
-<img src="F:\储存桌面文件\node.js下载.png" alt="node.js下载" style="zoom: 80%;">
-
-
-
-<img src="F:\储存桌面文件\git下载.png" alt="git下载" style="zoom: 80%;">
-
-
-
-<img src="F:\储存桌面文件\微信截图_20190905151935.png" alt="微信截图_20190905151935" style="zoom:80%;">
-
-
-
-<p>安装基本没什么问题，可以改软件放置的硬盘，但需要注意其他配置要保持默认，这样就完成安装啦!</p>
-<h3 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2. 安装hexo"></a>2. 安装hexo</h3><p>在本地磁盘（任意一个）中新建一个命名为Hexo的文件夹</p>
-<img src="F:\储存桌面文件\新建hexo.png" alt="新建hexo" style="zoom:50%;">
-
-
-
-<p>打开Hexo文件夹，在空白处鼠标右键，选择”Git Bash Here“</p>
-<img src="C:\Users\way\AppData\Roaming\Typora\typora-user-images\1567668225897.png" alt="1567668225897" style="zoom: 80%;">
-
-
-
-<p>输入node -v回车，如下图所示显示版本号，意味着node安装成功，若不是下图所示，则需要重新安装，npm同理。</p>
-<img src="F:\储存桌面文件\微信截图_20190905152612.png" alt="微信截图_20190905152612" style="zoom:80%;">
-
-
-
-<p>继续输入：</p>
-<pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.prg</code></pre><p>上述代码是安装了cnpm，之后利用cnpm下载速度会提高。</p>
-<p>接着输入cnpm，检查是否安装成功</p>
-<img src="F:\储存桌面文件\微信截图_20190905154215.png" alt="微信截图_20190905154215" style="zoom: 80%;">
-
-
-
-<p>==完成之后安装hexo==</p>
-<p>输入以下代码来进行hexo的安装，安装成功：</p>
-<pre><code>cnpm install -g hexo-cli</code></pre><h2 id="三、运行测试"><a href="#三、运行测试" class="headerlink" title="三、运行测试"></a>三、运行测试</h2><p>接下来继续在终端分别输入“hexo i blog”、“cd blog”、“hexo g”、”hexo s”命令，结果如下图所示：</p>
-<pre><code>hexo i blog //init的缩写 blog是项目名（文件名）
-cd blog //切换到站点根目录
-hexo g //generetor的缩写
-hexo s //server的缩写</code></pre><img src="F:\储存桌面文件\微信截图_20190905185723.png" alt="微信截图_20190905185723" style="zoom:80%;">
-
-
-
-<img src="F:\储存桌面文件\微信截图_20190905185654.png" alt="微信截图_20190905185654" style="zoom:80%;">
-
-
-
-<p>输入“hexo s”之后服务器会启动(可以通过ctrl+c停止)，然后打开浏览器，在浏览器输入localhost:4000，我们就可以惊喜的看到：</p>
-<img src="https://caiyantao.gitee.io/2019/04/13/Hexo-%E4%B8%80/3a9c7bbce1acbabfaade371c961c667.png" alt="img" style="zoom:80%;">
-
-
-
-<p>此时，你就完成博客的本地环境搭建啦！（不要把gitbash终端关掉，后面还需要用到）</p>
-<p>接下来我们会将博客部署到github服务器中，方便远程使用。</p>
-<h2 id="四、部署github"><a href="#四、部署github" class="headerlink" title="四、部署github"></a>四、部署github</h2><h3 id="1-新建仓库"><a href="#1-新建仓库" class="headerlink" title="1. 新建仓库"></a>1. 新建仓库</h3><p>首先我们需要注册一个github账号，打开“<a href="https://github.com/”网站点击&quot;sign" target="_blank" rel="noopener">https://github.com/”网站点击&quot;sign</a> up”进行账号注册,注册完成后在首页点击”New”来新建仓库,如图：</p>
-<p><img src="F:%5C%E5%82%A8%E5%AD%98%E6%A1%8C%E9%9D%A2%E6%96%87%E4%BB%B6%5C%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190906165729.png" alt="微信截图_20190906165729"></p>
-<p>在创建仓库时，输入仓库名称需要注意名称格式“yourname.github.io”，其中yourname指的是你注册时候的用户名（这一点很关键，不然之后会报错！！），其他设置保持默认，点击“Create repository”，如图：</p>
-<p><img src="F:%5C%E5%82%A8%E5%AD%98%E6%A1%8C%E9%9D%A2%E6%96%87%E4%BB%B6%5C%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190906170331.png" alt="微信截图_20190906170331"></p>
-<p>创建好之后我们返回到gitbash，需要在gitbash中配置github中你的用户信息（包括用户名和邮箱），分别输入以下两条命令，其中“way-github”和“<a href="mailto:764154011@qq.com" target="_blank" rel="noopener">764154011@qq.com</a>”是我的github信息，你需要替换成你自己注册的github用户名和邮箱，如图：</p>
-<p><img src="F:%5C%E5%82%A8%E5%AD%98%E6%A1%8C%E9%9D%A2%E6%96%87%E4%BB%B6%5C%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190906171325.png" alt="微信截图_20190906171325"></p>
-<p>配置完信息之后，我们创建SSH，通过输入 ssh-keygen -t rsa -C “你的邮箱”   ，如下图所示命令即可创建，然后根据程序反馈的结果，找到id_rsa文件的位置：</p>
-<p><img src="F:%5C%E5%82%A8%E5%AD%98%E6%A1%8C%E9%9D%A2%E6%96%87%E4%BB%B6%5C%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190906172835.png" alt="微信截图_20190906172835"></p>
-<img src="F:\储存桌面文件\微信截图_20190906173114.png" alt="微信截图_20190906173114" style="zoom:80%;">
-
-
-
-
-
+                <h2 id="BeautifulSoup4库"><a href="#BeautifulSoup4库" class="headerlink" title="BeautifulSoup4库"></a>BeautifulSoup4库</h2><p>和lxml一样，bs也是一个HTML/XML解析器，作用Html网页进行解析,是解析、遍历、维护“标签树”的功能库，lxml只会局部遍历，而bs是基于HTML DOM，会载入整个文档，解析整个DOM树，因此时间和内存开销都会大很多，因此性能低于lxml，但bs4解析HTML最简单。</p>
+<h3 id="解析工具对比"><a href="#解析工具对比" class="headerlink" title="解析工具对比"></a>解析工具对比</h3><table>
+<thead>
+<tr>
+<th>解析工具</th>
+<th>解析速度</th>
+<th>使用难度</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Beautiful</td>
+<td>最慢</td>
+<td>最简单</td>
+</tr>
+<tr>
+<td>lxml</td>
+<td>快</td>
+<td>简单</td>
+</tr>
+<tr>
+<td>正则表达式</td>
+<td>最快</td>
+<td>最难</td>
+</tr>
+</tbody></table>
+<h3 id="BeautifulSoup4与lxml的关系"><a href="#BeautifulSoup4与lxml的关系" class="headerlink" title="BeautifulSoup4与lxml的关系"></a>BeautifulSoup4与lxml的关系</h3><p>类似于python是由C语言写出来的，bs4需要基于lxml解析器，才能更好的进行DOM树解析，因此在使用bs4库时，常常使用lxml解析器配合。</p>
+<h3 id="解析器安装与使用方法"><a href="#解析器安装与使用方法" class="headerlink" title="解析器安装与使用方法"></a>解析器安装与使用方法</h3><p>一般选择使用lxml解析器，其容错率和速度较合适，以下是解析器使用方法与安装:</p>
+<table>
+<thead>
+<tr>
+<th>解析器</th>
+<th>使用方法</th>
+<th>条件</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bs4的HTML解析器</td>
+<td>BeautifulSoup(mk,’html.parser’)</td>
+<td>安装bs4库</td>
+</tr>
+<tr>
+<td>lxml的HTML解析器(最常使用)</td>
+<td>BeautifulSoup(mk,’lxml’)</td>
+<td>pip install lxml</td>
+</tr>
+<tr>
+<td>lxml的XML解析器</td>
+<td>BeautifulSoup(mk,’xml’)</td>
+<td>pip install lxml</td>
+</tr>
+<tr>
+<td>html5lib的解析器</td>
+<td>BeautifulSoup(mk,’html5lib’)</td>
+<td>pip install html5lib</td>
+</tr>
+</tbody></table>
+<h3 id="bs4库代码演示"><a href="#bs4库代码演示" class="headerlink" title="bs4库代码演示"></a>bs4库代码演示</h3><pre class=" language-python"><code class="language-python">From bs4 <span class="token keyword">import</span> BeautifulSoup
+soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span><span class="token string">'&lt;p>data&lt;p>,'</span>lxml'<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>prettify<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>                     </code></pre>
 
             </div>
             <hr/>
@@ -676,9 +639,9 @@ hexo s //server的缩写</code></pre><img src="F:\储存桌面文件\微信截�
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《从0开始搭建属于自己的博客（一）》
+                    《【学习笔记】python》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/03/jiao-cheng-cong-0-kai-shi-da-jian-yi-ge-zi-ji-de-bo-ke-yi/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/06/xue-xi-bi-ji-python/" property="cc:attributionName"
                rel="cc:attributionURL">
                 way
             </a> 采用
@@ -981,6 +944,55 @@ hexo s //server的缩写</code></pre><img src="F:\储存桌面文件\微信截�
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
+                <a href="/2019/09/10/xue-xi-bi-ji-c-yu-yan-ru-men/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="【学习笔记】C语言入门">
+                        
+                        <span class="card-title">【学习笔记】C语言入门</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            《C程序设计》学习笔记记录
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-10
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/编程学习笔记/" class="post-category" target="_blank">
+                                    编程学习笔记
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/笔记/" target="_blank">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
                 <a href="/2019/09/04/index/">
                     <div class="card-image">
                         
@@ -997,9 +1009,9 @@ hexo s //server的缩写</code></pre><img src="F:\储存桌面文件\微信截�
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-04
-                        </span>
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-04
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
@@ -1017,56 +1029,6 @@ hexo s //server的缩写</code></pre><img src="F:\储存桌面文件\微信截�
                     
                     <a href="/tags/theme/" target="_blank">
                         <span class="chip bg-color">theme</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/09/03/jiao-cheng-cong-0-kai-shi-da-jian-yi-ge-zi-ji-de-bo-ke-yi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="从0开始搭建属于自己的博客（一）">
-                        
-                        <span class="card-title">从0开始搭建属于自己的博客（一）</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            零基础小白的个人博客搭建全记录
-                        
-                    </div>
-                    <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-03
-                            </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/教程/" class="post-category" target="_blank">
-                                    教程
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/教程/" target="_blank">
-                        <span class="chip bg-color">教程</span>
                     </a>
                     
                 </div>

@@ -4,8 +4,9 @@
 
 <head><meta name="generator" content="Hexo 3.9.0">
     <meta charset="utf-8">
-    <meta name="keywords" content="从0开始搭建属于自己的博客（一）, Hexo">
-    <meta name="description" content="一、写在前面想必大家对于“博客”一词并不感到陌生，似乎在印象中博客就是很早以前论坛下一些技术大牛发表文章的网站。随着互联网的发展，手机移动端成为主流，写文章，看文章的用户也转移到了手机上，出现了像微信公众号等平台，似乎掌握新媒体成为了大众必">
+    <meta name="keywords" content="【学习笔记】C语言入门, Hexo">
+    <meta name="description" content="一、写在前面这是一篇关于C语言入门学习的笔记记录，主要会将所学到的C语言重要的知识点和难点进行整合。所用的学习资料是《C程序设计（第五版）》以及中国大学MOOC翁恺老师的视频。
+二、基础概念2.1 程序与程序设计：程序指的是用计算机语言来描">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
     <meta name="renderer" content="webkit|ie-stand|ie-comp">
@@ -13,7 +14,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <title>从0开始搭建属于自己的博客（一） | Hexo</title>
+    <title>【学习笔记】C语言入门 | Hexo</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/font-awesome.min.css">
@@ -260,13 +261,13 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
                     <div class="description center-align post-title">
-                        从0开始搭建属于自己的博客（一）
+                        【学习笔记】C语言入门
                     </div>
                 </div>
             </div>
@@ -377,8 +378,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/教程/" target="_blank">
-                                <span class="chip bg-color">教程</span>
+                            <a href="/tags/笔记/" target="_blank">
+                                <span class="chip bg-color">笔记</span>
                             </a>
                         
                     </div>
@@ -389,8 +390,8 @@
                     <div class="post-cate">
                         <i class="fa fa-bookmark fa-fw icon-category"></i>
                         
-                            <a href="/categories/教程/" class="post-category" target="_blank">
-                                教程
+                            <a href="/categories/编程学习笔记/" class="post-category" target="_blank">
+                                编程学习笔记
                             </a>
                         
                     </div>
@@ -401,21 +402,21 @@
             <div class="post-info">
                 <div class="post-date info-break-policy">
                     <i class="fa fa-calendar-minus-o fa-fw"></i>发布日期:&nbsp;&nbsp; 
-                    2019-09-03
+                    2019-09-10
                 </div>
 			
                 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1k
+                        1.1k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        3 分
+                        4 分
                     </div>
                     
                 
@@ -431,93 +432,83 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>想必大家对于“博客”一词并不感到陌生，似乎在印象中博客就是很早以前论坛下一些技术大牛发表文章的网站。随着互联网的发展，手机移动端成为主流，写文章，看文章的用户也转移到了手机上，出现了像微信公众号等平台，似乎掌握新媒体成为了大众必备技能之一。</p>
-<p>除此之外，博客也在不断的升级，其技术壁垒的下降，以及其所能承载的功能与适用性的提升，使得越来越多的用户也开始了搭建属于自己的博客。下面总结一下，拥有个人博客的几点好处：</p>
+                <h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>这是一篇关于C语言入门学习的笔记记录，主要会将所学到的C语言重要的知识点和难点进行整合。所用的学习资料是《C程序设计（第五版）》以及中国大学MOOC翁恺老师的视频。</p>
+<h2 id="二、基础概念"><a href="#二、基础概念" class="headerlink" title="二、基础概念"></a>二、基础概念</h2><p>2.1 程序与程序设计：程序指的是用计算机语言来描述某一问题的解决步骤，而编写程序的过程即为程序设计。</p>
+<p>2.2 程序设计语言：程序设计语言的种类很多，按照发展历史以及功能情况大致划分成为五个阶段。</p>
 <ul>
-<li>文章撰写</li>
-<li>笔记/生活记录</li>
-<li>信息资料整合</li>
-<li>个性化管理</li>
-<li>工作面试简历</li>
-<li>作品集展示</li>
+<li>机器语言：计算机可以直接识别和执行的二进制语言。</li>
+<li>汇编语言：用“助记符”来表示机器指令。</li>
+<li>算法语言（高级语言）：不依赖于机器，降低了编程难度。</li>
+<li>面向任务的程序设计语言：是非过程化语言，不需要知道问题如何求解的（如SQL）。</li>
+<li>面向对象的程序设计语言：认为系统是由许多对象组成，对象通过消息互相联系和互相作用，从而完成系统的功能（如C++）。</li>
 </ul>
-<p>由于我是零基础小白，为了能够建立起自己的博客，找了很多教程，走过很多坑，在此特别感谢b站up主CodeSheep。同时为了避免其他小伙伴踩坑，我会将自己的完整搭建过程写下来，废话不多说，马上搞起！！</p>
-<p>ps：本教程适用于win10系统，使用hexo+github，搭建全程免费，无编程基础的小伙伴也能完成！</p>
-<h2 id="二、前期准备"><a href="#二、前期准备" class="headerlink" title="二、前期准备"></a>二、前期准备</h2><h3 id="1-软件下载"><a href="#1-软件下载" class="headerlink" title="1. 软件下载"></a>1. 软件下载</h3><p>首先需要在电脑下载两个软件（一定要先安装完软件再进行下面的操作！！）：</p>
-<p>【node.js】</p>
-<p>——————————————</p>
-<p>【git】</p>
-<p>在官网选择如下图所示版本进行下载，两个软件安装时均【默认配置不用改】，直接点击next就可以了。</p>
-<img src="F:\储存桌面文件\node.js下载.png" alt="node.js下载" style="zoom: 80%;">
+<p>2.3 C语言：C语言起源于1986年发表的CPL语言，是一种结构化语言，重点在于算法与数据结构。其中C语言是面向过程程序，C++是面向对象的程序，C是C++的子集。</p>
+<h2 id="三、程序基本结构"><a href="#三、程序基本结构" class="headerlink" title="三、程序基本结构"></a>三、程序基本结构</h2><p>3.1 C语言程序示例</p>
+<p>问：已知三个整数8、12、6，按公式s=a+b*c计算并显示结果。</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;stdio.h></span> </span><span class="token comment" spellcheck="true">/*#include 指预处理命令；stdio.h标准输入输出头文件*/</span>
 
-
-
-<img src="F:\储存桌面文件\git下载.png" alt="git下载" style="zoom: 80%;">
-
-
-
-<img src="F:\储存桌面文件\微信截图_20190905151935.png" alt="微信截图_20190905151935" style="zoom:80%;">
-
-
-
-<p>安装基本没什么问题，可以改软件放置的硬盘，但需要注意其他配置要保持默认，这样就完成安装啦!</p>
-<h3 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2. 安装hexo"></a>2. 安装hexo</h3><p>在本地磁盘（任意一个）中新建一个命名为Hexo的文件夹</p>
-<img src="F:\储存桌面文件\新建hexo.png" alt="新建hexo" style="zoom:50%;">
-
-
-
-<p>打开Hexo文件夹，在空白处鼠标右键，选择”Git Bash Here“</p>
-<img src="C:\Users\way\AppData\Roaming\Typora\typora-user-images\1567668225897.png" alt="1567668225897" style="zoom: 80%;">
-
-
-
-<p>输入node -v回车，如下图所示显示版本号，意味着node安装成功，若不是下图所示，则需要重新安装，npm同理。</p>
-<img src="F:\储存桌面文件\微信截图_20190905152612.png" alt="微信截图_20190905152612" style="zoom:80%;">
-
-
-
-<p>继续输入：</p>
-<pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.prg</code></pre><p>上述代码是安装了cnpm，之后利用cnpm下载速度会提高。</p>
-<p>接着输入cnpm，检查是否安装成功</p>
-<img src="F:\储存桌面文件\微信截图_20190905154215.png" alt="微信截图_20190905154215" style="zoom: 80%;">
-
-
-
-<p>==完成之后安装hexo==</p>
-<p>输入以下代码来进行hexo的安装，安装成功：</p>
-<pre><code>cnpm install -g hexo-cli</code></pre><h2 id="三、运行测试"><a href="#三、运行测试" class="headerlink" title="三、运行测试"></a>三、运行测试</h2><p>接下来继续在终端分别输入“hexo i blog”、“cd blog”、“hexo g”、”hexo s”命令，结果如下图所示：</p>
-<pre><code>hexo i blog //init的缩写 blog是项目名（文件名）
-cd blog //切换到站点根目录
-hexo g //generetor的缩写
-hexo s //server的缩写</code></pre><img src="F:\储存桌面文件\微信截图_20190905185723.png" alt="微信截图_20190905185723" style="zoom:80%;">
-
-
-
-<img src="F:\储存桌面文件\微信截图_20190905185654.png" alt="微信截图_20190905185654" style="zoom:80%;">
-
-
-
-<p>输入“hexo s”之后服务器会启动(可以通过ctrl+c停止)，然后打开浏览器，在浏览器输入localhost:4000，我们就可以惊喜的看到：</p>
-<img src="https://caiyantao.gitee.io/2019/04/13/Hexo-%E4%B8%80/3a9c7bbce1acbabfaade371c961c667.png" alt="img" style="zoom:80%;">
-
-
-
-<p>此时，你就完成博客的本地环境搭建啦！（不要把gitbash终端关掉，后面还需要用到）</p>
-<p>接下来我们会将博客部署到github服务器中，方便远程使用。</p>
-<h2 id="四、部署github"><a href="#四、部署github" class="headerlink" title="四、部署github"></a>四、部署github</h2><h3 id="1-新建仓库"><a href="#1-新建仓库" class="headerlink" title="1. 新建仓库"></a>1. 新建仓库</h3><p>首先我们需要注册一个github账号，打开“<a href="https://github.com/”网站点击&quot;sign" target="_blank" rel="noopener">https://github.com/”网站点击&quot;sign</a> up”进行账号注册,注册完成后在首页点击”New”来新建仓库,如图：</p>
-<p><img src="F:%5C%E5%82%A8%E5%AD%98%E6%A1%8C%E9%9D%A2%E6%96%87%E4%BB%B6%5C%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190906165729.png" alt="微信截图_20190906165729"></p>
-<p>在创建仓库时，输入仓库名称需要注意名称格式“yourname.github.io”，其中yourname指的是你注册时候的用户名（这一点很关键，不然之后会报错！！），其他设置保持默认，点击“Create repository”，如图：</p>
-<p><img src="F:%5C%E5%82%A8%E5%AD%98%E6%A1%8C%E9%9D%A2%E6%96%87%E4%BB%B6%5C%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190906170331.png" alt="微信截图_20190906170331"></p>
-<p>创建好之后我们返回到gitbash，需要在gitbash中配置github中你的用户信息（包括用户名和邮箱），分别输入以下两条命令，其中“way-github”和“<a href="mailto:764154011@qq.com" target="_blank" rel="noopener">764154011@qq.com</a>”是我的github信息，你需要替换成你自己注册的github用户名和邮箱，如图：</p>
-<p><img src="F:%5C%E5%82%A8%E5%AD%98%E6%A1%8C%E9%9D%A2%E6%96%87%E4%BB%B6%5C%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190906171325.png" alt="微信截图_20190906171325"></p>
-<p>配置完信息之后，我们创建SSH，通过输入 ssh-keygen -t rsa -C “你的邮箱”   ，如下图所示命令即可创建，然后根据程序反馈的结果，找到id_rsa文件的位置：</p>
-<p><img src="F:%5C%E5%82%A8%E5%AD%98%E6%A1%8C%E9%9D%A2%E6%96%87%E4%BB%B6%5C%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190906172835.png" alt="微信截图_20190906172835"></p>
-<img src="F:\储存桌面文件\微信截图_20190906173114.png" alt="微信截图_20190906173114" style="zoom:80%;">
-
-
-
-
-
+<span class="token keyword">int</span> <span class="token function">main</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment" spellcheck="true">/*C中main主函数有且仅有一个，同时整个程序的开始与结束也在主函数中*/</span>
+<span class="token punctuation">{</span>
+    <span class="token keyword">int</span> a<span class="token punctuation">,</span>b<span class="token punctuation">,</span>c<span class="token punctuation">,</span>s<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*定义整型变量;注意分号（;）是语句的结束*/</span>
+    a<span class="token operator">=</span><span class="token number">8</span><span class="token punctuation">;</span>b<span class="token operator">=</span><span class="token number">12</span><span class="token punctuation">;</span>c<span class="token operator">=</span><span class="token number">6</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*变量赋值进行初始化*/</span>
+    s<span class="token operator">=</span>a<span class="token operator">+</span>b<span class="token operator">*</span>c<span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*算术运算并赋值*/</span>
+    <span class="token function">printf</span><span class="token punctuation">(</span><span class="token string">"s=%d\n"</span><span class="token punctuation">,</span>s<span class="token punctuation">)</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*printf输出函数；\n代表换行回车*/</span>
+    <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span> <span class="token comment" spellcheck="true">/*主函数需要返回值*/</span>
+<span class="token punctuation">}</span></code></pre>
+<p>3.2 字符集、标识符和关键字</p>
+<p>字符集：主要包括英文字母、阿拉伯数字（0~9）、下划线（_）。</p>
+<p>标识符：变量名/函数名/类型名等有效字符序列，C语言规定只能由字母、数字和下划线三种字符组成，且第一个字符不能为数字。</p>
+<p>关键字：具有特殊含义的标识符，用户不能用来作自定义标识符，如int,float,return等。</p>
+<h2 id="四、基本数据类型与表达式"><a href="#四、基本数据类型与表达式" class="headerlink" title="四、基本数据类型与表达式"></a>四、基本数据类型与表达式</h2><p>4.1 数据类型可以分为四种：</p>
+<ul>
+<li>基本类型：字符型（char）、整型（Int）、实型（float、double）</li>
+<li>构造类型：数组类型([ ])、结构体类型(struct)、共用体类型(union)</li>
+<li>指针类型(*)</li>
+<li>空类型（void）</li>
+</ul>
+<p>4.2 整型：整型可以由十进制、八进制、十六进制表示，与整型相关的关键字包括int（2~4字节）\short（2字节）\long（4字节）\unsigned（正数）\signed（负数）</p>
+<p>4.3 实型：常量有十进制小数形式（如：2.3）或指数形式（12.5e-6），关键字包括float(单精度)、double（双精度）</p>
+<p>4.4 字符类型：常量表示有用单引号括起来的一个字符（如：’a’、‘A’）还有反斜杠（\）引导的转义字符，如\n代表换行回车</p>
+<p>4.5 常量：常量指的是在程序运行中，不能被改变的指，包括直接常量（数值和字符型常量）和符号常量（标识符定义）。符号常量是用标识符来表示一个数据，在程序中不能给他赋值，定义形式为 #define 标识符 常量数据，如下图演示：</p>
+<pre class=" language-c"><code class="language-c"><span class="token macro property">#<span class="token directive keyword">define</span> PI 3.14159</span></code></pre>
+<p>在程序内凡是出现标识符PI的地方数据都表示3.14159，这样便于后续的数据统一修改。</p>
+<p>4.6 变量：指的是以标识符为名字，其值可以改变，使用变量时必须“先定义、后使用”。</p>
+<p>4.7 表达式：由操作数（算子）和运算符组成的序列</p>
+<p>4.8 运算符优先级</p>
+<table>
+<thead>
+<tr>
+<th>优先级</th>
+<th>运算符</th>
+<th>运算</th>
+<th>结合关系</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>+ -（代表正/负）</td>
+<td>单目不变/单目取负</td>
+<td>自右向左</td>
+</tr>
+<tr>
+<td>2</td>
+<td>* / %</td>
+<td>乘、除、取余</td>
+<td>自左向右</td>
+</tr>
+<tr>
+<td>3</td>
+<td>+ -</td>
+<td>加、减</td>
+<td>自左向右</td>
+</tr>
+<tr>
+<td>4</td>
+<td>=</td>
+<td>赋值</td>
+<td>自右向左</td>
+</tr>
+</tbody></table>
 
             </div>
             <hr/>
@@ -676,9 +667,9 @@ hexo s //server的缩写</code></pre><img src="F:\储存桌面文件\微信截�
             <br/>
             <span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text"
                   property="dct:title" rel="dct:type">
-                    《从0开始搭建属于自己的博客（一）》
+                    《【学习笔记】C语言入门》
                 </span> 由
-            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/03/jiao-cheng-cong-0-kai-shi-da-jian-yi-ge-zi-ji-de-bo-ke-yi/" property="cc:attributionName"
+            <a xmlns:cc="http://creativecommons.org/ns#" href="/2019/09/10/xue-xi-bi-ji-c-yu-yan-ru-men/" property="cc:attributionName"
                rel="cc:attributionURL">
                 way
             </a> 采用
@@ -977,84 +968,36 @@ hexo s //server的缩写</code></pre><img src="F:\储存桌面文件\微信截�
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="fa fa-dot-circle-o"></i>&nbsp;本篇
+            </div>
             <div class="card">
-                <a href="/2019/09/04/index/">
+                <a href="/2019/09/10/xue-xi-bi-ji-c-yu-yan-ru-men/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="typora-vue-theme主题介绍">
+                        <img src="/medias/featureimages/14.jpg" class="responsive-img" alt="【学习笔记】C语言入门">
                         
-                        <span class="card-title">typora-vue-theme主题介绍</span>
+                        <span class="card-title">【学习笔记】C语言入门</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简约清晰的主题推荐
-                        
-                    </div>
-                    <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-04
-                        </span>
-                        <span class="publish-author">
-                            
-                            <i class="fa fa-bookmark fa-fw icon-category"></i>
-                            
-                            <a href="/categories/Markdown/" class="post-category" target="_blank">
-                                    Markdown
-                                </a>
-                            
-                            
-                        </span>
-                    </div>
-                </div>
-                
-                <div class="card-action article-tags">
-                    
-                    <a href="/tags/theme/" target="_blank">
-                        <span class="chip bg-color">theme</span>
-                    </a>
-                    
-                </div>
-                
-            </div>
-        </div>
-        
-        
-        <div class="article col s12 m6" data-aos="fade-up">
-            <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="fa fa-dot-circle-o"></i>
-            </div>
-            <div class="card">
-                <a href="/2019/09/03/jiao-cheng-cong-0-kai-shi-da-jian-yi-ge-zi-ji-de-bo-ke-yi/">
-                    <div class="card-image">
-                        
-                        
-                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="从0开始搭建属于自己的博客（一）">
-                        
-                        <span class="card-title">从0开始搭建属于自己的博客（一）</span>
-                    </div>
-                </a>
-                <div class="card-content article-content">
-                    <div class="summary block-with-text">
-                        
-                            零基础小白的个人博客搭建全记录
+                            《C程序设计》学习笔记记录
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-03
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-10
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/教程/" class="post-category" target="_blank">
-                                    教程
+                            <a href="/categories/编程学习笔记/" class="post-category" target="_blank">
+                                    编程学习笔记
                                 </a>
                             
                             
@@ -1065,8 +1008,53 @@ hexo s //server的缩写</code></pre><img src="F:\储存桌面文件\微信截�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/教程/" target="_blank">
-                        <span class="chip bg-color">教程</span>
+                    <a href="/tags/笔记/" target="_blank">
+                        <span class="chip bg-color">笔记</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fa fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/2019/09/06/xue-xi-bi-ji-python/">
+                    <div class="card-image">
+                        
+                        
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="【学习笔记】python">
+                        
+                        <span class="card-title">【学习笔记】python</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            BeautifulSoup4库和lxml一样，bs也是一个HTML/XML解析器，作用Html网页进行解析,是解析、遍历、维护“标签树”的功能库，lxml只会局部遍历，而bs是基于HTML DOM，会载入整个文档，解析整个DOM树，因此时间
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-06
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fa fa-user fa-fw"></i>
+                            way
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/笔记/" target="_blank">
+                        <span class="chip bg-color">笔记</span>
                     </a>
                     
                 </div>
