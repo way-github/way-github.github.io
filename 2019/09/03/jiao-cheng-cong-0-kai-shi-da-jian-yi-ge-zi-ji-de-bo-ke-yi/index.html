@@ -408,14 +408,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        1k
+                        1.5k
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        3 分
+                        5 分
                     </div>
                     
                 
@@ -432,6 +432,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="一、写在前面"><a href="#一、写在前面" class="headerlink" title="一、写在前面"></a>一、写在前面</h2><p>想必大家对于“博客”一词并不感到陌生，似乎在印象中博客就是很早以前论坛下一些技术大牛发表文章的网站。随着互联网的发展，手机移动端成为主流，写文章，看文章的用户也转移到了手机上，出现了像微信公众号等平台，似乎掌握新媒体成为了大众必备技能之一。</p>
+<p><img src="https://note.youdao.com/yws/res/20/WEBRESOURCE84f1f31f16bcc183224677a4196106ec" alt="个人博客"></p>
 <p>除此之外，博客也在不断的升级，其技术壁垒的下降，以及其所能承载的功能与适用性的提升，使得越来越多的用户也开始了搭建属于自己的博客。下面总结一下，拥有个人博客的几点好处：</p>
 <ul>
 <li>文章撰写</li>
@@ -444,80 +445,65 @@
 <p>由于我是零基础小白，为了能够建立起自己的博客，找了很多教程，走过很多坑，在此特别感谢b站up主CodeSheep。同时为了避免其他小伙伴踩坑，我会将自己的完整搭建过程写下来，废话不多说，马上搞起！！</p>
 <p>ps：本教程适用于win10系统，使用hexo+github，搭建全程免费，无编程基础的小伙伴也能完成！</p>
 <h2 id="二、前期准备"><a href="#二、前期准备" class="headerlink" title="二、前期准备"></a>二、前期准备</h2><h3 id="1-软件下载"><a href="#1-软件下载" class="headerlink" title="1. 软件下载"></a>1. 软件下载</h3><p>首先需要在电脑下载两个软件（一定要先安装完软件再进行下面的操作！！）：</p>
-<p>【node.js】</p>
+<p>【node.js】<a href="https://nodejs.org/en/" target="_blank" rel="noopener">https://nodejs.org/en/</a></p>
 <p>——————————————</p>
-<p>【git】</p>
-<p>在官网选择如下图所示版本进行下载，两个软件安装时均【默认配置不用改】，直接点击next就可以了。</p>
-<img src="F:\储存桌面文件\node.js下载.png" alt="node.js下载" style="zoom: 80%;">
-
-
-
-<img src="F:\储存桌面文件\git下载.png" alt="git下载" style="zoom: 80%;">
-
-
-
-<img src="F:\储存桌面文件\微信截图_20190905151935.png" alt="微信截图_20190905151935" style="zoom:80%;">
-
-
-
-<p>安装基本没什么问题，可以改软件放置的硬盘，但需要注意其他配置要保持默认，这样就完成安装啦!</p>
-<h3 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2. 安装hexo"></a>2. 安装hexo</h3><p>在本地磁盘（任意一个）中新建一个命名为Hexo的文件夹</p>
-<img src="F:\储存桌面文件\新建hexo.png" alt="新建hexo" style="zoom:50%;">
-
-
-
-<p>打开Hexo文件夹，在空白处鼠标右键，选择”Git Bash Here“</p>
-<img src="C:\Users\way\AppData\Roaming\Typora\typora-user-images\1567668225897.png" alt="1567668225897" style="zoom: 80%;">
-
-
-
-<p>输入node -v回车，如下图所示显示版本号，意味着node安装成功，若不是下图所示，则需要重新安装，npm同理。</p>
-<img src="F:\储存桌面文件\微信截图_20190905152612.png" alt="微信截图_20190905152612" style="zoom:80%;">
-
-
-
-<p>继续输入：</p>
-<pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.prg</code></pre><p>上述代码是安装了cnpm，之后利用cnpm下载速度会提高。</p>
-<p>接着输入cnpm，检查是否安装成功</p>
-<img src="F:\储存桌面文件\微信截图_20190905154215.png" alt="微信截图_20190905154215" style="zoom: 80%;">
-
-
-
-<p>==完成之后安装hexo==</p>
-<p>输入以下代码来进行hexo的安装，安装成功：</p>
-<pre><code>cnpm install -g hexo-cli</code></pre><h2 id="三、运行测试"><a href="#三、运行测试" class="headerlink" title="三、运行测试"></a>三、运行测试</h2><p>接下来继续在终端分别输入“hexo i blog”、“cd blog”、“hexo g”、”hexo s”命令，结果如下图所示：</p>
+<p>【git】<a href="https://git-scm.com/download/win" target="_blank" rel="noopener">https://git-scm.com/download/win</a></p>
+<p>进入官网，在官网选择如下图所示版本进行下载。</p>
+<p>需要注意的是，两个软件安装时，均保持【默认配置不用改】，直接点击next就可以了。</p>
+<p><img src="https://note.youdao.com/yws/res/14/WEBRESOURCE1ababcddf8a9da3e9e3c72ec94fd71fe" alt="node.js官网"></p>
+<p><img src="https://note.youdao.com/yws/res/16/WEBRESOURCEd19d3e49b079ae405f96d76378b430e4" alt="git官网"></p>
+<p><img src="https://note.youdao.com/yws/res/18/WEBRESOURCEf47a1c5395e81bcadd4575a9230ee5c4" alt="安装成功"></p>
+<p>安装基本没什么问题，如上图所示，这样就完成安装啦!</p>
+<h3 id="2-安装hexo"><a href="#2-安装hexo" class="headerlink" title="2. 安装hexo"></a>2. 安装hexo</h3><p>接下来要安装hexo，先在本地磁盘中（随意一个）新建一个命名为Hexo（命名随意）的文件夹：</p>
+<p><img src="https://note.youdao.com/yws/res/28/WEBRESOURCE4b349389840b33b7aea0e0408b1ff266" alt="新建文件夹"></p>
+<p>接着打开Hexo文件夹，在空白处鼠标右键，选择”Git Bash Here“，弹出一个窗口</p>
+<p><img src="https://note.youdao.com/yws/res/36/WEBRESOURCE100e62284c0ab8bc4e438b1a45b84fcb" alt="鼠标右键"></p>
+<p>在窗口中输入node -v ，点击回车，如下图所示显示版本号，意味着node安装成功，若不是下图所示，则需要重新安装；npm同理。</p>
+<p><img src="https://note.youdao.com/yws/res/23/WEBRESOURCE2eb8b3a439cfe98e5daeabeacfd6e9cd" alt="检查是否软件安装成功"></p>
+<p>继续输入以下代码：</p>
+<pre><code>npm install -g cnpm --registry=https://registry.npm.taobao.prg</code></pre><p>上述代码是对cnpm进行安装，后续我们将利用cnpm，其下载速度会提高。</p>
+<p>接着输入cnpm，检查是否安装成功,如下图所示则安装成功：</p>
+<p><img src="https://note.youdao.com/yws/res/27/WEBRESOURCE043190c5fa09da7915c6c1dddde52c25" alt="cnpm"></p>
+<p>最后，输入以下代码，来进行hexo的安装：</p>
+<pre><code>cnpm install -g hexo-cli</code></pre><h2 id="三、运行测试"><a href="#三、运行测试" class="headerlink" title="三、运行测试"></a>三、运行测试</h2><p>接下来，在终端分别输入“hexo i blog”、“cd blog”、“hexo g”、”hexo s”命令，结果如下图所示：</p>
 <pre><code>hexo i blog //init的缩写 blog是项目名（文件名）
 cd blog //切换到站点根目录
 hexo g //generetor的缩写
-hexo s //server的缩写</code></pre><img src="F:\储存桌面文件\微信截图_20190905185723.png" alt="微信截图_20190905185723" style="zoom:80%;">
+hexo s //server的缩写</code></pre><p><img src="https://note.youdao.com/yws/res/31/WEBRESOURCEe341cc0dbacc49d97b197a516d3e3a4a" alt></p>
+<p><img src="https://note.youdao.com/yws/res/26/WEBRESOURCE1cee926ed0b7d48c66e361448605ba5f" alt></p>
+<p>如上图所示，输入“hexo s”之后服务器会启动(如果要关闭，可以通过ctrl+c关闭)，然后打开浏览器，在浏览器输入localhost:4000，我们就可以惊喜的看到：</p>
+<img src="https://caiyantao.gitee.io/2019/04/13/Hexo-%E4%B8%80/3a9c7bbce1acbabfaade371c961c667.png" alt="最初始博客" style="zoom:80%;">
 
 
 
-<img src="F:\储存桌面文件\微信截图_20190905185654.png" alt="微信截图_20190905185654" style="zoom:80%;">
-
-
-
-<p>输入“hexo s”之后服务器会启动(可以通过ctrl+c停止)，然后打开浏览器，在浏览器输入localhost:4000，我们就可以惊喜的看到：</p>
-<img src="https://caiyantao.gitee.io/2019/04/13/Hexo-%E4%B8%80/3a9c7bbce1acbabfaade371c961c667.png" alt="img" style="zoom:80%;">
-
-
-
-<p>此时，你就完成博客的本地环境搭建啦！（不要把gitbash终端关掉，后面还需要用到）</p>
+<p>此时，你就完成博客的本地环境搭建啦！（先不要把gitbash窗口关掉，后面还需要用到）</p>
 <p>接下来我们会将博客部署到github服务器中，方便远程使用。</p>
-<h2 id="四、部署github"><a href="#四、部署github" class="headerlink" title="四、部署github"></a>四、部署github</h2><h3 id="1-新建仓库"><a href="#1-新建仓库" class="headerlink" title="1. 新建仓库"></a>1. 新建仓库</h3><p>首先我们需要注册一个github账号，打开“<a href="https://github.com/”网站点击&quot;sign" target="_blank" rel="noopener">https://github.com/”网站点击&quot;sign</a> up”进行账号注册,注册完成后在首页点击”New”来新建仓库,如图：</p>
-<p><img src="F:%5C%E5%82%A8%E5%AD%98%E6%A1%8C%E9%9D%A2%E6%96%87%E4%BB%B6%5C%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190906165729.png" alt="微信截图_20190906165729"></p>
+<h2 id="四、部署github"><a href="#四、部署github" class="headerlink" title="四、部署github"></a>四、部署github</h2><p>首先我们需要注册一个github账号，打开“<a href="https://github.com/”" target="_blank" rel="noopener">https://github.com/”</a></p>
+<p>在网站右上方点击”sign up”进行账号注册。</p>
+<p>注册完成后在首页点击”New”来新建仓库,如图所示：</p>
+<p><img src="https://note.youdao.com/yws/res/39/WEBRESOURCEcf1cd6ae401b405be3e3464a3fef6409" alt="新建仓库"></p>
 <p>在创建仓库时，输入仓库名称需要注意名称格式“yourname.github.io”，其中yourname指的是你注册时候的用户名（这一点很关键，不然之后会报错！！），其他设置保持默认，点击“Create repository”，如图：</p>
-<p><img src="F:%5C%E5%82%A8%E5%AD%98%E6%A1%8C%E9%9D%A2%E6%96%87%E4%BB%B6%5C%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190906170331.png" alt="微信截图_20190906170331"></p>
+<p><img src="https://note.youdao.com/yws/res/41/WEBRESOURCEcaaedfff5d1211ebeb7d2c889cde31ff" alt="仓库名称命名"></p>
 <p>创建好之后我们返回到gitbash，需要在gitbash中配置github中你的用户信息（包括用户名和邮箱），分别输入以下两条命令，其中“way-github”和“<a href="mailto:764154011@qq.com" target="_blank" rel="noopener">764154011@qq.com</a>”是我的github信息，你需要替换成你自己注册的github用户名和邮箱，如图：</p>
-<p><img src="F:%5C%E5%82%A8%E5%AD%98%E6%A1%8C%E9%9D%A2%E6%96%87%E4%BB%B6%5C%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190906171325.png" alt="微信截图_20190906171325"></p>
+<p><img src="https://note.youdao.com/yws/res/43/WEBRESOURCEad34551f79ad2faa3e2835fb88f7d2b3" alt="账号配置"></p>
 <p>配置完信息之后，我们创建SSH，通过输入 ssh-keygen -t rsa -C “你的邮箱”   ，如下图所示命令即可创建，然后根据程序反馈的结果，找到id_rsa文件的位置：</p>
-<p><img src="F:%5C%E5%82%A8%E5%AD%98%E6%A1%8C%E9%9D%A2%E6%96%87%E4%BB%B6%5C%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20190906172835.png" alt="微信截图_20190906172835"></p>
-<img src="F:\储存桌面文件\微信截图_20190906173114.png" alt="微信截图_20190906173114" style="zoom:80%;">
-
-
-
-
-
+<p><img src="https://note.youdao.com/yws/res/47/WEBRESOURCEc4f5516e88f76053fea9c249c26642d7" alt></p>
+<p><img src="https://note.youdao.com/yws/res/49/WEBRESOURCE8927fb4843274b4505efa9c7b7fca937" alt></p>
+<p>如上图所示，我们打开id_rsa.pub文件（用记事本打开），将里面的代码全选并复制。</p>
+<p><img src="https://note.youdao.com/yws/res/53/WEBRESOURCE4d08f3524b764ae79ca41d4130a3d45e" alt></p>
+<p>复制完id_rsa.pub的内容后，我们返回github页面，在右上角用户信息中选择“Settings”,来进行SSH的添加，如下图：</p>
+<p><img src="http://note.youdao.com/yws/res/51/WEBRESOURCE910c77be43e320f7c5dffcfd960d746e" alt></p>
+<p><img src="https://note.youdao.com/yws/res/56/WEBRESOURCE355073ec5c31452d10f53b481bad4121" alt></p>
+<p><img src="https://note.youdao.com/yws/res/58/WEBRESOURCE40a9619365b03ebfe1423d1957e7446c" alt></p>
+<p>将之前复制的代码粘贴到上图的Key中，Title可以随便取。</p>
+<p>接着我们回到根目录下，打开_config.yml（右键config.yml，点击notepad++方式打开），进行如下图所示的站点配置：</p>
+<p><img src="https://note.youdao.com/yws/res/60/WEBRESOURCE7f932c502ec79d3f9b98c8de049d2294" alt></p>
+<p><img src="https://note.youdao.com/yws/res/62/WEBRESOURCEdf9643edee98ab9710d986b1c2105cbf" alt="站点配置"></p>
+<p>返回gitbash，分别输入”hexo clean”、“hexo g”、”hexo s”，然后打开浏览器输入“localhost:4000”查看，如果页面正常显示说明配置修改没有影响其他因素，可以进行下面的步骤。</p>
+<p>最后，我们首先安装相关的插件，在gitbash输入“npm install hexo-deployer-git –save”命令来进行安装，等待安装完成：</p>
+<pre><code>npm install hexo-deployer-git --save</code></pre><p>安装完成后我们像之前一样，在gitbash中分别输入“hexo clean”、”hexo g”、”hexo d”，通过三个命令完成最后的部署</p>
+<p>输入hexo d过程中会弹出一个窗口，你需要输入你的github用户名和密码，完成之后，你就可以在浏览器输入（<a href="https://yourname.github.io）" target="_blank" rel="noopener">https://yourname.github.io）</a></p>
+<p>其中yourname指你的github用户名，这样你就完成将你的博客部署到github服务器中啦，之后用这个网站将方便博客的查看与使用。</p>
 
             </div>
             <hr/>
@@ -981,31 +967,31 @@ hexo s //server的缩写</code></pre><img src="F:\储存桌面文件\微信截�
             <div class="article-badge left-badge text-color">
                 <i class="fa fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/2019/09/04/index/">
+                <a href="/2019/09/06/xue-xi-bi-ji-python/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="typora-vue-theme主题介绍">
+                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="【学习笔记】python">
                         
-                        <span class="card-title">typora-vue-theme主题介绍</span>
+                        <span class="card-title">【学习笔记】python</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简约清晰的主题推荐
+                            python学习笔记记录
                         
                     </div>
                     <div class="publish-info">
                         <span class="publish-date">
-                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-04
+                            <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-06
                         </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Markdown/" class="post-category" target="_blank">
-                                    Markdown
+                            <a href="/categories/编程学习笔记/" class="post-category" target="_blank">
+                                    编程学习笔记
                                 </a>
                             
                             
@@ -1015,8 +1001,8 @@ hexo s //server的缩写</code></pre><img src="F:\储存桌面文件\微信截�
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/theme/" target="_blank">
-                        <span class="chip bg-color">theme</span>
+                    <a href="/tags/笔记/" target="_blank">
+                        <span class="chip bg-color">笔记</span>
                     </a>
                     
                 </div>
@@ -1187,7 +1173,7 @@ hexo s //server的缩写</code></pre><img src="F:\储存桌面文件\微信截�
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">2.4k</span>
+                <span class="white-color">4.3k</span>
             
 
             

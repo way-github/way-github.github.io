@@ -386,6 +386,15 @@
                 </div>
                 <div class="col s5 right-align">
                     
+                    <div class="post-cate">
+                        <i class="fa fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/编程学习笔记/" class="post-category" target="_blank">
+                                编程学习笔记
+                            </a>
+                        
+                    </div>
+                    
                 </div>
             </div>
 
@@ -399,14 +408,14 @@
                     
                     <div class="info-break-policy">
                         <i class="fa fa-file-word-o fa-fw"></i>文章字数:&nbsp;&nbsp;
-                        303
+                        636
                     </div>
                     
 
                     
                     <div class="info-break-policy">
                         <i class="fa fa-clock-o fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                        1 分
+                        2 分
                     </div>
                     
                 
@@ -481,6 +490,67 @@
 <h3 id="bs4库代码演示"><a href="#bs4库代码演示" class="headerlink" title="bs4库代码演示"></a>bs4库代码演示</h3><pre class=" language-python"><code class="language-python">From bs4 <span class="token keyword">import</span> BeautifulSoup
 soup <span class="token operator">=</span> BeautifulSoup<span class="token punctuation">(</span><span class="token string">'&lt;p>data&lt;p>,'</span>lxml'<span class="token punctuation">)</span>
 <span class="token keyword">print</span><span class="token punctuation">(</span>soup<span class="token punctuation">.</span>prettify<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>                     </code></pre>
+<h3 id="find-all方法代码演示"><a href="#find-all方法代码演示" class="headerlink" title="find_all方法代码演示"></a>find_all方法代码演示</h3><pre class=" language-python"><code class="language-python"><span class="token comment" spellcheck="true">#获取所有tr标签</span>
+trs <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'tr'</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> tr <span class="token keyword">in</span> trs<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>tr<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#获取第2个tr标签</span>
+tr <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'tr'</span><span class="token punctuation">,</span>limit<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>tr<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#获取所有class等于even的tr标签</span>
+trs <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'tr'</span><span class="token punctuation">,</span>attrs<span class="token operator">=</span><span class="token punctuation">{</span>‘<span class="token keyword">class</span>’<span class="token punctuation">:</span><span class="token string">'even'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> tr <span class="token keyword">in</span> trs<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>tr<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#将所有id等于text,class也等于text的a标签提取出来</span>
+aList <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">,</span>attrs<span class="token operator">=</span><span class="token punctuation">{</span><span class="token string">'id'</span><span class="token punctuation">:</span><span class="token string">'text'</span><span class="token punctuation">,</span><span class="token string">'class'</span><span class="token punctuation">:</span><span class="token string">'text'</span><span class="token punctuation">}</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> a <span class="token keyword">in</span> aList<span class="token punctuation">:</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>a<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#获取所有a标签的href属性</span>
+aList <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'a'</span><span class="token punctuation">)</span>
+<span class="token keyword">for</span> a <span class="token keyword">in</span> aList<span class="token punctuation">:</span>
+    href <span class="token operator">=</span> a<span class="token punctuation">[</span><span class="token string">'href'</span><span class="token punctuation">]</span>
+    <span class="token keyword">print</span><span class="token punctuation">(</span>href<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#获取所有的职位信息-纯文本（第一种方法）</span>
+trs <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'tr'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+movies <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> tr <span class="token keyword">in</span> trs<span class="token punctuation">:</span>
+    tds <span class="token operator">=</span> tr<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'td'</span><span class="token punctuation">)</span>
+    movie <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    title <span class="token operator">=</span> tds<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token punctuation">.</span>string
+    category <span class="token operator">=</span> tds<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>string
+    nums <span class="token operator">=</span> tds<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">.</span>string
+    city <span class="token operator">=</span> tds<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">.</span>string
+    movie<span class="token punctuation">[</span><span class="token string">'title'</span><span class="token punctuation">]</span> <span class="token operator">=</span> title
+    movie<span class="token punctuation">[</span><span class="token string">'category'</span><span class="token punctuation">]</span> <span class="token operator">=</span> category
+    movie<span class="token punctuation">[</span><span class="token string">'nums'</span><span class="token punctuation">]</span> <span class="token operator">=</span> nums
+    movie<span class="token punctuation">[</span><span class="token string">'city'</span><span class="token punctuation">]</span> <span class="token operator">=</span> city
+    movies<span class="token punctuation">.</span>append<span class="token punctuation">(</span>movie<span class="token punctuation">)</span>
+
+<span class="token keyword">print</span><span class="token punctuation">(</span>movies<span class="token punctuation">)</span>
+
+<span class="token comment" spellcheck="true">#获取所有的职位信息-纯文本（第二种方法）</span>
+trs <span class="token operator">=</span> soup<span class="token punctuation">.</span>find_all<span class="token punctuation">(</span><span class="token string">'tr'</span><span class="token punctuation">)</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">:</span><span class="token punctuation">]</span>
+movies <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">]</span>
+<span class="token keyword">for</span> tr <span class="token keyword">in</span> trs<span class="token punctuation">:</span>
+    movie <span class="token operator">=</span> <span class="token punctuation">{</span><span class="token punctuation">}</span>
+    infos <span class="token operator">=</span> list<span class="token punctuation">(</span>tr<span class="token punctuation">.</span>stripped_strings<span class="token punctuation">)</span>
+       movie<span class="token punctuation">[</span><span class="token string">'title'</span><span class="token punctuation">]</span> <span class="token operator">=</span> info<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span>
+    movie<span class="token punctuation">[</span><span class="token string">'category'</span><span class="token punctuation">]</span> <span class="token operator">=</span> info<span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">]</span>
+    movie<span class="token punctuation">[</span><span class="token string">'nums'</span><span class="token punctuation">]</span> <span class="token operator">=</span> info<span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">]</span>
+    movie<span class="token punctuation">[</span><span class="token string">'city'</span><span class="token punctuation">]</span> <span class="token operator">=</span> info<span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">]</span>
+    movies<span class="token punctuation">.</span>append<span class="token punctuation">(</span>movie<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span>movies<span class="token punctuation">)</span></code></pre>
+<ul>
+<li>string:获取某个标签下的非字符串、返回来的是个字符串</li>
+<li>strings:获取某个标签下的子孙非标签字符串</li>
+<li>stripped_strings:获取某个标签下的子孙非1标签字符串，会去掉空白字符</li>
+<li>get_back:获取某个标签下的子孙非标签字符串，不是以列表的形式返回，以字符串返回</li>
+</ul>
 
             </div>
             <hr/>
@@ -993,31 +1063,31 @@ soup <span class="token operator">=</span> BeautifulSoup<span class="token punct
                 下一篇&nbsp;<i class="fa fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2019/09/04/index/">
+                <a href="/2019/09/03/jiao-cheng-cong-0-kai-shi-da-jian-yi-ge-zi-ji-de-bo-ke-yi/">
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="typora-vue-theme主题介绍">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="从0开始搭建属于自己的博客（一）">
                         
-                        <span class="card-title">typora-vue-theme主题介绍</span>
+                        <span class="card-title">从0开始搭建属于自己的博客（一）</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            简约清晰的主题推荐
+                            零基础小白的个人博客搭建全记录
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-04
+                                <i class="fa fa-clock-o fa-fw icon-date"></i>2019-09-03
                             </span>
                         <span class="publish-author">
                             
                             <i class="fa fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Markdown/" class="post-category" target="_blank">
-                                    Markdown
+                            <a href="/categories/教程/" class="post-category" target="_blank">
+                                    教程
                                 </a>
                             
                             
@@ -1027,8 +1097,8 @@ soup <span class="token operator">=</span> BeautifulSoup<span class="token punct
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/theme/" target="_blank">
-                        <span class="chip bg-color">theme</span>
+                    <a href="/tags/教程/" target="_blank">
+                        <span class="chip bg-color">教程</span>
                     </a>
                     
                 </div>
@@ -1149,7 +1219,7 @@ soup <span class="token operator">=</span> BeautifulSoup<span class="token punct
 
             
                 &nbsp;<i class="fa fa-area-chart"></i>&nbsp;站点总字数:&nbsp;
-                <span class="white-color">2.4k</span>
+                <span class="white-color">4.3k</span>
             
 
             
